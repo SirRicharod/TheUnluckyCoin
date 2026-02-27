@@ -1,0 +1,13 @@
+:root {
+/* CSS HSL */
+--bg-primary: hsla(326, 13%, 33%, 1);
+--bg-secondary: hsla(321, 19%, 50%, 1);
+--accent-primary: hsla(74, 10%, 47%, 1);
+--text-primary: hsla(330, 12%, 90%, 1);
+--text-secondary: hsla(352, 29%, 70%, 1);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
