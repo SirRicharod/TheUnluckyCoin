@@ -1,13 +1,215 @@
-:root {
-/* CSS HSL */
---bg-primary: hsla(326, 13%, 33%, 1);
---bg-secondary: hsla(321, 19%, 50%, 1);
---accent-primary: hsla(74, 10%, 47%, 1);
---text-primary: hsla(330, 12%, 90%, 1);
---text-secondary: hsla(352, 29%, 70%, 1);
+﻿:root {
+    --bg-dark: #09090a;
+    --bg-surface: #141414;
+    --color-gold: #c9a84c;
+    --color-gold-glow: #f0d080;
+    --text-main: #f0ece4;
+    --text-muted: #b09d7f;
+    --accent-glow: rgba(201, 168, 76, 0.22);
+    --border-style: 1px solid var(--color-gold);
 }
 
+@font-face {
+    font-family: 'Cinzel';
+    src: url('Cinzel-Medium.ttf') format('ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Limelight';
+    src: url('Limelight-Regular.ttf') format('ttf');
+    font-weight: 400;
+}
+
+/* -- Base -- */
 body {
-    background: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+.gold {
+    background-image: linear-gradient(to right,
+            #462523 0,
+            #cb9b51 22%,
+            #f6e27a 45%,
+            #f6f2c0 50%,
+            #f6e27a 55%,
+            #cb9b51 78%,
+            #462523 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.cinzel {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.limelight {
+    font-family: "Limelight", serif;
+    font-weight: 900;
+}
+
+/* -- Navbar -- */
+.navbar {
+    background-color: var(--bg-surface) !important;
+    border-bottom: var(--border-style);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--color-gold) !important;
+}
+
+.nav-link:hover {
+    color: var(--color-gold-glow) !important;
+}
+
+/* -- Section headings (shared) -- */
+h2 {
+    color: var(--color-gold);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* -- Section padding (shared) -- */
+#hero,
+#features,
+#products {
+    padding: 3rem 1rem;
+}
+
+#hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+#hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+}
+
+/* -- Surface cards (shared between .step and .curse-card) -- */
+.step,
+.curse-card {
+    background-color: var(--bg-surface);
+    border: var(--border-style);
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0 18px var(--accent-glow);
+}
+
+.step {
+    padding: 2rem 1.5rem;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step-label {
+    display: block;
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+}
+
+.step-icon {
+    display: block;
+    font-size: 2.6rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.step h5 {
+    color: var(--color-gold-glow);
+    margin-bottom: 0.4rem;
+}
+
+.step p,
+.curse-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.step-arrow {
+    color: var(--color-gold);
+    font-size: 1.4rem;
+    opacity: 0.35;
+    padding: 0 0.25rem;
+}
+
+.curse-card {
+    padding: 2.5rem 2rem;
+    max-width: 380px;
+    width: 100%;
+}
+
+.curse-card h3 {
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.curse-card .price {
+    font-size: 3.5rem;
+    color: var(--color-gold-glow);
+    font-weight: bold;
+    line-height: 1;
+    margin: 0.5rem 0 1rem;
+}
+
+.curse-card p {
+    margin-bottom: 1.5rem;
+}
+
+/* -- Button -- */
+.btn-curse {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.6rem 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-curse:hover {
+    background-color: var(--color-gold-glow);
+    color: var(--bg-dark);
+}
+
+/* -- Disclaimer -- */
+#disclaimer {
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* -- Footer -- */
+footer {
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
+    border-top: var(--border-style);
 }
