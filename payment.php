@@ -1,7 +1,9 @@
 <?php
-session_start();
+// This file has been superseded by order.php.
+// Redirect any old links to the new order form.
+header('Location: order.php', true, 301);
+exit;
 
-$errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $targetName     = trim($_POST['target_name'] ?? '');

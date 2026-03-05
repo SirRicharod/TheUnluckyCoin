@@ -1,0 +1,4 @@
+# Block direct browser access to sensitive files
+<FilesMatch "^(\.env|composer\.json|composer\.lock|shop-meta\.json)$">
+    Require all denied
+</FilesMatch>

@@ -1,11 +1,16 @@
 {
     "name": "The Unlucky Coin",
-    "tagline": "A minor inconvenience for someone you don't like.",
+    "tagline": "A minor inconvenience for someone who truly deserves it.",
     "owner": "Riccardo",
     "emoji": "🪙",
-    "emojiurl": "☄️",
-    "linkurl": "https://sirricharod.github.io/portfolio/",
-    "price_range": "€1",
-    "accent": "#D4AF37",
-    "hot": true
+    "price": "€2",
+    "accent_dark": "#0d0b14",
+    "accent_gold": "#c9a84c",
+    "accent_purple": "#7b5ea7",
+    "pages": {
+        "landing": "index.php",
+        "order": "order.php",
+        "confirmation": "thankyou.php"
+    },
+    "kofi_link": "https://ko-fi.com/s/2e828bfbdc"
 }
