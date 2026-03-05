@@ -1,4 +1,10 @@
 # Block direct browser access to sensitive files
 <FilesMatch "^(\.env|composer\.json|composer\.lock|shop-meta\.json)$">
-    Require all denied
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
